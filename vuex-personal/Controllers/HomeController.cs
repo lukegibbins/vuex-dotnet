@@ -15,9 +15,9 @@ namespace vuex_personal.Controllers
             return View();
         }
 
-        public IActionResult GetNames()
+        public IActionResult Names()
         {
-            // returns view information
+            // returns vue page
             return Json("Vue Names will appear here...");
         }
 
