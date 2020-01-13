@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukeg\\Documents\\TheTin\\vuex-personal\\vuex-personal\\vuex-personal.csproj": {}
+    "C:\\Users\\luke.gibbins\\source\\vuex-dotnet\\vuex-personal\\vuex-personal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukeg\\Documents\\TheTin\\vuex-personal\\vuex-personal\\vuex-personal.csproj": {
+    "C:\\Users\\luke.gibbins\\source\\vuex-dotnet\\vuex-personal\\vuex-personal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukeg\\Documents\\TheTin\\vuex-personal\\vuex-personal\\vuex-personal.csproj",
+        "projectUniqueName": "C:\\Users\\luke.gibbins\\source\\vuex-dotnet\\vuex-personal\\vuex-personal.csproj",
         "projectName": "vuex-personal",
-        "projectPath": "C:\\Users\\lukeg\\Documents\\TheTin\\vuex-personal\\vuex-personal\\vuex-personal.csproj",
-        "packagesPath": "C:\\Users\\lukeg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukeg\\Documents\\TheTin\\vuex-personal\\vuex-personal\\obj\\",
+        "projectPath": "C:\\Users\\luke.gibbins\\source\\vuex-dotnet\\vuex-personal\\vuex-personal.csproj",
+        "packagesPath": "C:\\Users\\luke.gibbins\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luke.gibbins\\source\\vuex-dotnet\\vuex-personal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lukeg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luke.gibbins\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
             }
           },
           "imports": [

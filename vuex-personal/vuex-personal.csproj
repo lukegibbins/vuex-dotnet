@@ -10,12 +10,13 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <Folder Include="Vue\Components\" />
-    <Folder Include="Vue\Stores\" />
+    <Folder Include="ClientApp\Bundles\" />
+    <Folder Include="Controllers\ApiControllers\" />
   </ItemGroup>
 
 </Project>
