@@ -1,5 +1,4 @@
 // # index.js is used to define all the stores files
-
 import Vue from "vue"
 import Vuex from "vuex";
 
