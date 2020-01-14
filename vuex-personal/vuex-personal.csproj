@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\Bundles\" />
-    <Folder Include="Controllers\ApiControllers\" />
   </ItemGroup>
 
 </Project>

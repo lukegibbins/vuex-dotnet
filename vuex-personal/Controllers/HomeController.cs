@@ -1,7 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using vuex_personal.Models;
 
 namespace vuex_personal.Controllers
 {

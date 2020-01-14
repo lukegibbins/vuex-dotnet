@@ -11,6 +11,9 @@ export default {
     .catch(error => {
       console.error("Error getting contact data from request.", error)
     });    
-  }
+  },
 
+  saveContactData({ currentState }) {
+    console.log();
+  }
 }
