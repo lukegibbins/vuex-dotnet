@@ -3,6 +3,8 @@
   <h1>Manage contacts template</h1>
   <br />
 
+  <greeting-section></greeting-section>
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -14,10 +16,10 @@
     </thead>
     <tbody>
       <tr v-for="contact in contacts">
-        <td> {{contact.firstName }} </td>
-        <td> {{contact.surname }} </td>
-        <td> {{contact.age }} </td>
-        <td> {{contact.gender }} </td>
+        <td> {{ contact.firstName }} </td>
+        <td> {{ contact.surname }} </td>
+        <td> {{ contact.age }} </td>
+        <td> {{ contact.gender }} </td>
       </tr>
     </tbody>
   </table>

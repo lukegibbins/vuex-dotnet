@@ -11,8 +11,8 @@ namespace vuex_personal.Controllers
 
     public IActionResult Contacts()
     {
-        // returns the generated bundle to the view
-        return Json("This is temporary");
+      ViewBag.Uri = "../ClientApp/Bundles/ContactsPage.bundle.js";
+      return View("RenderVue");
     }
   }
 }

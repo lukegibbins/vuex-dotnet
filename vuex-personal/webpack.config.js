@@ -1,23 +1,10 @@
-var path = require('path')
-var webpack = require('webpack')
-var fs = require('fs')
-
-var appBasePath = './Vue/Components/'
-
-var jsEntries = {}
-fs.readdirSync(appBasePath).forEach(function (name) {
-  var indexFile = appBasePath + name + '/main.js'
-  if (fs.existsSync(indexFile)) {
-    jsEntries[name] = indexFile
-  }
-})
+var webpack = require('webpack');
 
 module.exports = {
-  entry: jsEntries,
+  entry: './ClientApp/Applications/Contacts.js',
   output: {
-    path: path.resolve(__dirname, './Vue/Bundles/'),
-    publicPath: '/Vue/Bundles/',
-    filename: '[name].js'
+    path: __dirname + './ClientApp/Bundles',
+    filename: 'Contacts.bundle.js'
   },
   module: {
     rules: [

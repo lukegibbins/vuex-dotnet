@@ -55,3 +55,4 @@ C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\v
 C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.dll
 C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.pdb
 C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.csproj.CopyComplete
+C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\Home\RenderVue.g.cshtml.cs
