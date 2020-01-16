@@ -15,7 +15,7 @@
 
 
   <ItemGroup>
-    <Folder Include="ClientApp\Bundles\" />
+    <Folder Include="wwwroot\bundle-files\" />
   </ItemGroup>
 
 </Project>

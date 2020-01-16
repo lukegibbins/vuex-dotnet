@@ -2,7 +2,5 @@
 // # contactData will contain data which is returned from an axios request
 
 export default {
-
   contactData: []
-
-};
+}

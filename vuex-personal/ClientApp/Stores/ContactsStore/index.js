@@ -2,17 +2,18 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
+// it is vitally important that these names are as they are. Vue will only recognise these names
 import state from "./state";
 import getters from "./getters";
 import actions from "./actions";
-import mutators from "./mutators";
+import mutations from "./mutations";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state,
   getters,
-  mutators,
+  mutations,
   actions
 });
 

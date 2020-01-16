@@ -6,6 +6,11 @@ namespace vuex_personal.Controllers.ApiControllers
 {
   public class ContactsController : Controller
   {
+    public IActionResult Test()
+    {
+      return Json("Good to go!");
+    }
+
     public IActionResult GetContacts()
     {
       var data = GenerateContactData();

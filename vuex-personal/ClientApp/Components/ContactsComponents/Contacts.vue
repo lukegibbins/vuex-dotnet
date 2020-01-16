@@ -1,33 +1,36 @@
 <template>
+  <div>
+    <h1>Manage contacts template</h1>
+    <br />
 
-  <h1>Manage contacts template</h1>
-  <br />
+    <!--     <div>
+    <greeting-section></greeting-section>
+  </div>-->
 
-  <greeting-section></greeting-section>
-
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th> First name </th>
-        <th> Surname </th>
-        <th> Age</th>
-        <th> Gender</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="contact in contacts">
-        <td> {{ contact.firstName }} </td>
-        <td> {{ contact.surname }} </td>
-        <td> {{ contact.age }} </td>
-        <td> {{ contact.gender }} </td>
-      </tr>
-    </tbody>
-  </table>
-
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th> First name </th>
+          <th> Surname </th>
+          <th> Age</th>
+          <th> Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="contact in contacts">
+          <td> {{ contact.firstName }} </td>
+          <td> {{ contact.surname }} </td>
+          <td> {{ contact.age }} </td>
+          <td> {{ contact.gender }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 
 <script>
+  import { mapGetters } from 'vuex';
   // component imports
   import Greeting from "./Greeting";
 
@@ -36,7 +39,7 @@
 
     // Define additional components to bring into this vue file; Greeting.vue
     components: {
-      "greeting-section:": Greeting
+      "greeting-section": Greeting
     },
 
     // Computed properties are able to process and even modify getters or locally stored Data().
@@ -54,11 +57,11 @@
 
     methods: {
       submitForm() {
-            // here, the entireity of the state (state.contactData) is passed as a parameter in this method 
+            // here, the entirity of the state (state.contactData) is passed as a parameter in this method 
             this.$store.dispatch("saveContactData");
         }
     }
-  };
+  }
 </script>
 
 

@@ -1,9 +1,11 @@
 var webpack = require('webpack');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
+  mode: 'development',
   entry: './ClientApp/Applications/Contacts.js',
   output: {
-    path: __dirname + './ClientApp/Bundles',
+    path: __dirname + '/wwwroot/bundle-files',
     filename: 'Contacts.bundle.js'
   },
   module: {
@@ -37,21 +39,30 @@ module.exports = {
       }
     ]
   },
+
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
+
   devServer: {
     historyApiFallback: true,
     noInfo: true,
     overlay: true
   },
+
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+
+  devtool: '#eval-source-map',
+
+  plugins: [
+    // make sure to include the plugin for the magic
+    new VueLoaderPlugin()
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -60,7 +71,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: '"development"'
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
