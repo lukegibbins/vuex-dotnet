@@ -2,11 +2,6 @@
   <div>
     <h1>Manage contacts template</h1>
     <br />
-
-    <!--     <div>
-    <greeting-section></greeting-section>
-  </div>-->
-
     <table class="table table-striped">
       <thead>
         <tr>
@@ -18,28 +13,27 @@
       </thead>
       <tbody>
         <tr v-for="contact in contacts">
-          <td> {{ contact.firstName }} </td>
-          <td> {{ contact.surname }} </td>
-          <td> {{ contact.age }} </td>
-          <td> {{ contact.gender }} </td>
+          <td> <input v-model="contact.firstName"/> </td>
+          <td> <input v-model="contact.surname"/> </td>
+          <td> <input v-model="contact.age"/> </td>
+          <td> <input v-model="contact.gender"/> </td>
         </tr>
       </tbody>
     </table>
+    <button class="btn btn-primary btn-lg">Save</button>
   </div>
 </template>
 
 
 <script>
   import { mapGetters } from 'vuex';
-  // component imports
-  import Greeting from "./Greeting";
 
   export default {
     name: "ContactsPage",
 
     // Define additional components to bring into this vue file; Greeting.vue
     components: {
-      "greeting-section": Greeting
+      // this is where older
     },
 
     // Computed properties are able to process and even modify getters or locally stored Data().
@@ -89,5 +83,9 @@ td {
 th, td {
   min-width: 120px;
   padding: 10px 20px;
+}
+
+button{
+  float:right;
 }
 </style>

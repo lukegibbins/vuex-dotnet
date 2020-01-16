@@ -14,6 +14,6 @@ export default {
   },
 
   saveContactData({ currentState }) {
-    console.log();
+
   }
 };
