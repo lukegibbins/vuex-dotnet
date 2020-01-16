@@ -56,3 +56,32 @@ C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\v
 C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.pdb
 C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.csproj.CopyComplete
 C:\Users\luke.gibbins\source\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\Shared\RenderVue.g.cshtml.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\bin\Debug\netcoreapp2.2\vuex-personal.deps.json
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\bin\Debug\netcoreapp2.2\vuex-personal.runtimeconfig.json
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\bin\Debug\netcoreapp2.2\vuex-personal.runtimeconfig.dev.json
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\bin\Debug\netcoreapp2.2\vuex-personal.dll
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\bin\Debug\netcoreapp2.2\vuex-personal.pdb
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\bin\Debug\netcoreapp2.2\vuex-personal.Views.dll
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\bin\Debug\netcoreapp2.2\vuex-personal.Views.pdb
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.csprojAssemblyReference.cache
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.csproj.CoreCompileInputs.cache
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.RazorAssemblyInfo.cache
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.RazorAssemblyInfo.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.AssemblyInfoInputs.cache
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.AssemblyInfo.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.TagHelpers.input.cache
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.TagHelpers.output.cache
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.RazorCoreGenerate.cache
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\Shared\RenderVue.g.cshtml.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.RazorTargetAssemblyInfo.cache
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.RazorTargetAssemblyInfo.cs
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.Views.pdb
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.dll
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.pdb
+C:\Users\luke.gibbins\Documents\Visual Studio 2019\vuex-dotnet\vuex-personal\obj\Debug\netcoreapp2.2\vuex-personal.csproj.CopyComplete

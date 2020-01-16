@@ -1,26 +1,33 @@
 <template>
   <div>
-    <h1>Manage contacts template</h1>
+    <!-- In the entry vue file, the template used MUST be enclosed within div's -->
+    <h1>Manage Contacts</h1>
+    <br />
+    <button type="button" class="btn btn-primary" v-on:click="insert()"> Add Contact </button>
     <br />
     <table class="table table-striped">
       <thead>
         <tr>
-          <th> First name </th>
+          <th> First Name </th>
           <th> Surname </th>
           <th> Age</th>
           <th> Gender</th>
+          <th> </th>
+          <th> </th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="contact in contacts">
-          <td> <input v-model="contact.firstName"/> </td>
-          <td> <input v-model="contact.surname"/> </td>
-          <td> <input v-model="contact.age"/> </td>
-          <td> <input v-model="contact.gender"/> </td>
+        <tr v-for="(contact, index) in contacts">
+          <td> <input v-model="contact.firstName" :disabled="!contact.isEditable" /> </td>
+          <td> <input v-model="contact.surname" :disabled="!contact.isEditable" /> </td>
+          <td> <input v-model="contact.age" :disabled="!contact.isEditable" /> </td>
+          <td> <input v-model="contact.gender" :disabled="!contact.isEditable" /> </td>
+          <td> <button type="button" class="btn btn-warning" v-on:click="edit(index)"> Edit </button></td>
+          <td> <button type="button" class="btn btn-danger" v-on:click="remove(index)"> Delete </button></td>
         </tr>
       </tbody>
     </table>
-    <button class="btn btn-primary btn-lg">Save</button>
+    <input type="button" class="btn btn-success btn-lg" v-on:click="submitForm" value="Save" id="button-save" />
   </div>
 </template>
 
@@ -51,9 +58,22 @@
 
     methods: {
       submitForm() {
-            // here, the entirity of the state (state.contactData) is passed as a parameter in this method 
-            this.$store.dispatch("saveContactData");
-        }
+        // here, the entirity of the state (state.contactData) is passed as a parameter in this method 
+        this.$store.dispatch("saveContactData");
+      },
+
+      edit: function (contact_index) {   
+        !this.contacts[contact_index].isEditable ? this.contacts[contact_index].isEditable = true : this.contacts[contact_index].isEditable = false;
+      },
+
+      remove: function (contact_index) {
+        this.contacts.splice(contact_index, 1);
+      },
+
+      insert() {
+        let obj = { "firstName": "", "surname": "", "age": "", "gender": "", "isEditable": true };
+        this.contacts.push(obj);
+      }
     }
   }
 </script>
@@ -85,7 +105,7 @@ th, td {
   padding: 10px 20px;
 }
 
-button{
+#button-save {
   float:right;
 }
 </style>
