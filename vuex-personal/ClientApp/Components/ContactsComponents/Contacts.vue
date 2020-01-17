@@ -21,8 +21,16 @@
           <td> <input v-model="contact.firstName" :disabled="!contact.isEditable" /> </td>
           <td> <input v-model="contact.surname" :disabled="!contact.isEditable" /> </td>
           <td> <input v-model="contact.age" :disabled="!contact.isEditable" /> </td>
-          <td> <input v-model="contact.gender" :disabled="!contact.isEditable" /> </td>
-          <td> <button type="button" class="btn btn-warning" v-on:click="edit(index)"> Edit </button></td>
+          <td> <select v-model="contact.gender" :disabled="!contact.isEditable">
+                 <option v-for="gender in genderOptions" v-bind:value="gender">
+                   {{gender}}
+                 </option>
+             </select>
+          </td>
+          <td>
+            <button v-if="!contact.isEditable" type="button" class="btn btn-warning" v-on:click="edit(index)"> Edit </button>
+            <button v-else type="button" class="btn btn-warning" v-on:click="edit(index)"> Done </button>
+          </td>
           <td> <button type="button" class="btn btn-danger" v-on:click="remove(index)"> Delete </button></td>
         </tr>
       </tbody>
@@ -40,7 +48,8 @@
 
     // Define additional components to bring into this vue file; Greeting.vue
     components: {
-      // this is where older
+      // this is where other components from other .vue files would normally go
+      // e.g. help_section: "help-section" <!-- then this would be the html
     },
 
     // Computed properties are able to process and even modify getters or locally stored Data().
@@ -52,14 +61,39 @@
       })
     },
 
+    data() {
+      return {
+        genderOptions: ["Male", "Female"]
+      }
+    },
+
+    validations: {
+      contactData: {
+         $each: {
+          firstName: { required },
+          surname: { required },
+          age: {
+            required,
+            numeric,
+            between: between(1,100)
+          },
+            gender: { required }
+         }
+        }
+    },
+
     mounted() {
       this.$store.dispatch("loadContactData");
     },
 
     methods: {
       submitForm() {
-        // here, the entirity of the state (state.contactData) is passed as a parameter in this method 
-        this.$store.dispatch("saveContactData");
+        // here, the entirity of the state (state.contactData) is passed as a parameter in this method
+        this.$v.touch();
+
+        if (!this.$v.$invalid) {
+          this.$store.dispatch("saveContactData");
+        }
       },
 
       edit: function (contact_index) {   
@@ -71,7 +105,7 @@
       },
 
       insert() {
-        let obj = { "firstName": "", "surname": "", "age": "", "gender": "", "isEditable": true };
+        let obj = { firstName: "", surname: "", age: "", gender: "Male", isEditable: true };
         this.contacts.push(obj);
       }
     }

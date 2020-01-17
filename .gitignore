@@ -1,2 +1,5 @@
 ﻿.vs
 vuex-personal.
+vuex-personal/obj
+vuex-personal/wwwroot/bundle-files
+.vs

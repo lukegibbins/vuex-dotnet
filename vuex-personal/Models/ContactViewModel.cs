@@ -1,21 +1,21 @@
 
 namespace vuex_personal.Models
 {
-  public class ContactsViewModel
+  public class ContactViewModel
   {
     public string firstName { get; set; }
     public string surname { get; set; }
-    public int age { get; set; }
+    public string age { get; set; }
     public string gender { get; set; }
-    public bool isEditable { get; set; } = false;
+    public bool isEditable { get; set; }
 
-    public ContactsViewModel(string Firstname, string Surname, int Age, string Gender, bool IsEditable = false)
+    public ContactViewModel(string Firstname, string Surname, string Age, string Gender)
     {
       firstName = Firstname;
       surname = Surname;
       age = Age;
       gender = Gender;
-      isEditable = IsEditable;
+      isEditable = false;
     }
   }
 }

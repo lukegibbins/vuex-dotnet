@@ -11,8 +11,7 @@ namespace vuex_personal.Controllers
 
     public IActionResult Contacts()
     {
-      ViewBag.Uri = "../ClientApp/Bundles/ContactsPage.bundle.js";
-      return View("RenderVue");
+       return View("RenderVue");
     }
   }
 }
