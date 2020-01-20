@@ -10,8 +10,9 @@
         <tr>
           <th> First Name </th>
           <th> Surname </th>
-          <th> Age</th>
-          <th> Gender</th>
+          <th> Age </th>
+          <th> Gender </th>
+          <th> Projects </th>
           <th> </th>
           <th> </th>
         </tr>
@@ -36,10 +37,13 @@
           <td>
             <select v-model="contact.gender" :disabled="!contact.isEditable">
               <option v-for="gender in genderOptions" v-bind:value="gender">
-                {{gender}}
+                {{ gender }}
               </option>
             </select>
             <div class="error" v-if="!$v.contacts.$each[index].gender.required"> Required </div>
+          </td>
+          <td>
+            <multiselect v-model="contact.projects" :options="projects" :multiple="true" :disabled="!contact.isEditable"> </multiselect>
           </td>
           <td>
             <button v-if="!contact.isEditable" type="button" class="btn btn-warning" v-on:click="edit(index)"> Edit </button>
@@ -49,14 +53,14 @@
         </tr>
       </tbody>
     </table>
-    <input type="button" class="btn btn-success btn-lg" v-on:click="submitForm" value="Save" id="button-save" />
+    <input type="button" class="btn btn-success btn-lg" v-on:click="submitForm" value="Save" id="button-save"/>
   </div>
 </template>
 
 
 <script>
   import { mapGetters } from 'vuex';
-  import { required, numeric, between } from 'vuelidate/lib/validators'  // you need to define what validators you required here 
+  import { required, numeric, between } from 'vuelidate/lib/validators'  // you need to define what validators you required here
 
   export default {
     name: "ContactsPage",
@@ -94,9 +98,12 @@
       }
     },
 
+
+    // Refers to constant data on the page. This data can never be modified
     data() {
       return {
-        genderOptions: ["Male", "Female"]
+        genderOptions: ["Male", "Female"],
+        projects: ["CEO Survey", "Clearing House", "TOV-Product", "TOV-Spacy", "British Gas", "Dynamic"]
       }
     },
 
@@ -114,10 +121,10 @@
         } else {
           alert("Successful submission");
           this.$store.dispatch("saveContactData");
-        }         
+        }
       },
 
-      edit: function (contact_index) {   
+      edit: function (contact_index) {
         !this.contacts[contact_index].isEditable ? this.contacts[contact_index].isEditable = true : this.contacts[contact_index].isEditable = false;
       },
 
@@ -126,45 +133,47 @@
       },
 
       insert() {
-        let obj = { firstName: "", surname: "", age: "", gender: "", isEditable: true };
+        let obj = { firstName: "", surname: "", age: "", gender: "", isEditable: true, projects: []};
         this.contacts.push(obj);
       }
     }
   }
 </script>
 
-
 <style>
   table {
-  border: 2px solid #42b983;
-  border-radius: 3px;
-  background-color: #fff;
-}
+    border: 2px solid #42b983;
+    border-radius: 3px;
+    background-color: #fff;
+  }
 
-th {
-  background-color: #42b983;
-  color: rgba(255,255,255,0.66);
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+  th {
+    background-color: #42b983;
+    color: rgba(255,255,255,0.66);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
-td {
-  background-color: #f9f9f9;
-}
+  td {
+    background-color: #f9f9f9;
+  }
 
-th, td {
-  min-width: 120px;
-  padding: 10px 20px;
-}
+  th, td {
+    min-width: 120px;
+    padding: 10px 20px;
+  }
 
-#button-save {
-  float:right;
-}
+  .error {
+    color: red;
+  }
 
-.error {
-  color:red;
-}
+  #button-save {
+    float:right;
+  }
+
 </style>
+
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
