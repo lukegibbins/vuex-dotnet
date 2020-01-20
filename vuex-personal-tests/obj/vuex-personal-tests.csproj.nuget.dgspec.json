@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\vuex-dotnet\\vuex-personal-tests\\vuex-personal-tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\vuex-dotnet\\vuex-personal-tests\\vuex-personal-tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\vuex-dotnet\\vuex-personal-tests\\vuex-personal-tests.csproj",
+        "projectName": "vuex-personal-tests",
+        "projectPath": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\vuex-dotnet\\vuex-personal-tests\\vuex-personal-tests.csproj",
+        "packagesPath": "C:\\Users\\luke.gibbins\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\vuex-dotnet\\vuex-personal-tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\luke.gibbins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.9.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
