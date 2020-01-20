@@ -2,7 +2,7 @@
   <div>
     <!-- In the entry vue file, the template used MUST be enclosed within div's -->
     <h1>Manage Contacts</h1>
-    <br />
+    <br /> 
     <button type="button" class="btn btn-primary" v-on:click="insert()"> Add Contact </button>
     <br />
     <table class="table table-striped">
@@ -21,11 +21,12 @@
           <td> <input v-model="contact.firstName" :disabled="!contact.isEditable" /> </td>
           <td> <input v-model="contact.surname" :disabled="!contact.isEditable" /> </td>
           <td> <input v-model="contact.age" :disabled="!contact.isEditable" /> </td>
-          <td> <select v-model="contact.gender" :disabled="!contact.isEditable">
-                 <option v-for="gender in genderOptions" v-bind:value="gender">
-                   {{gender}}
-                 </option>
-             </select>
+          <td>
+            <select v-model="contact.gender" :disabled="!contact.isEditable">
+              <option v-for="gender in genderOptions" v-bind:value="gender">
+                {{gender}}
+              </option>
+            </select>
           </td>
           <td>
             <button v-if="!contact.isEditable" type="button" class="btn btn-warning" v-on:click="edit(index)"> Edit </button>
@@ -67,21 +68,6 @@
       }
     },
 
-    validations: {
-      contactData: {
-         $each: {
-          firstName: { required },
-          surname: { required },
-          age: {
-            required,
-            numeric,
-            between: between(1,100)
-          },
-            gender: { required }
-         }
-        }
-    },
-
     mounted() {
       this.$store.dispatch("loadContactData");
     },
@@ -89,11 +75,7 @@
     methods: {
       submitForm() {
         // here, the entirity of the state (state.contactData) is passed as a parameter in this method
-        this.$v.touch();
-
-        if (!this.$v.$invalid) {
-          this.$store.dispatch("saveContactData");
-        }
+          this.$store.dispatch("saveContactData");        
       },
 
       edit: function (contact_index) {   
