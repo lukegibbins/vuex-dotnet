@@ -2,7 +2,7 @@
   <div>
     <!-- In the entry vue file, the template used MUST be enclosed within div's -->
     <h1>Manage Contacts</h1>
-    <br /> 
+    <br />
     <button type="button" class="btn btn-primary" v-on:click="insert()"> Add Contact </button>
     <br />
     <table class="table table-striped">
@@ -18,15 +18,28 @@
       </thead>
       <tbody>
         <tr v-for="(contact, index) in contacts">
-          <td> <input v-model="contact.firstName" :disabled="!contact.isEditable" /> </td>
-          <td> <input v-model="contact.surname" :disabled="!contact.isEditable" /> </td>
-          <td> <input v-model="contact.age" :disabled="!contact.isEditable" /> </td>
+          <td>
+            <input v-model="contact.firstName" :disabled="!contact.isEditable" />
+            <!-- A div-error class is required for each of the model properties stating the error message output; ** VERY IMPORTANT ** -->
+            <div class="error" v-if="!$v.contacts.$each[index].firstName.required"> Required </div>
+          </td>
+          <td>
+            <input v-model="contact.surname" :disabled="!contact.isEditable" />
+            <div class="error" v-if="!$v.contacts.$each[index].surname.required"> Required </div>
+          </td>
+          <td>
+            <input v-model="contact.age" :disabled="!contact.isEditable" />
+            <div class="error" v-if="!$v.contacts.$each[index].age.required"> Required </div>
+            <div class="error" v-if="!$v.contacts.$each[index].age.numeric"> Numeric only </div>
+            <div class="error" v-if="!$v.contacts.$each[index].age.between"> Age ranges from 0-120 </div>
+          </td>
           <td>
             <select v-model="contact.gender" :disabled="!contact.isEditable">
               <option v-for="gender in genderOptions" v-bind:value="gender">
                 {{gender}}
               </option>
             </select>
+            <div class="error" v-if="!$v.contacts.$each[index].gender.required"> Required </div>
           </td>
           <td>
             <button v-if="!contact.isEditable" type="button" class="btn btn-warning" v-on:click="edit(index)"> Edit </button>
@@ -43,6 +56,7 @@
 
 <script>
   import { mapGetters } from 'vuex';
+  import { required, numeric, between } from 'vuelidate/lib/validators'  // you need to define what validators you required here 
 
   export default {
     name: "ContactsPage",
@@ -62,6 +76,24 @@
       })
     },
 
+    // validation object here is required to specify the array of objects which needs validating
+    // $each refers to each in the array
+    // required on the 'firstName' property means it is needed
+    validations: {
+      contacts: {
+        $each: {
+          firstName: { required },
+          surname: { required },
+          age: {
+            required,
+            numeric,
+            between: between(0, 120)
+          },
+          gender: { required }
+        }
+      }
+    },
+
     data() {
       return {
         genderOptions: ["Male", "Female"]
@@ -75,7 +107,14 @@
     methods: {
       submitForm() {
         // here, the entirity of the state (state.contactData) is passed as a parameter in this method
-          this.$store.dispatch("saveContactData");        
+        this.$v.$touch();
+
+        if (this.$v.$invalid) {
+          alert("Failed submission")
+        } else {
+          alert("Successful submission");
+          this.$store.dispatch("saveContactData");
+        }         
       },
 
       edit: function (contact_index) {   
@@ -87,7 +126,7 @@
       },
 
       insert() {
-        let obj = { firstName: "", surname: "", age: "", gender: "Male", isEditable: true };
+        let obj = { firstName: "", surname: "", age: "", gender: "", isEditable: true };
         this.contacts.push(obj);
       }
     }
@@ -123,5 +162,9 @@ th, td {
 
 #button-save {
   float:right;
+}
+
+.error {
+  color:red;
 }
 </style>

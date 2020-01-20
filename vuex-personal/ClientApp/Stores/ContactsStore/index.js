@@ -10,6 +10,7 @@ import actions from "./actions";
 import mutations from "./mutations";
 
 Vue.use(Vuex);
+Vue.use(Vuelidate);
 
 const store = new Vuex.Store({
   state,
