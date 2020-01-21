@@ -3,9 +3,8 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
-bin/Debug/netcoreapp2.2/
-obj/Debug/
-v16/
+bin/Debug/netcoreapp2.2
+obj/Debug
 
 # Editor directories and files
 .idea
