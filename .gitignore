@@ -1,25 +1,4 @@
-﻿.vs
-vuex-personal.
-vuex-personal/obj
-vuex-personal/wwwroot/bundle-files
-.vs
-.vs/vuex-personal/v16
-vuex.personal.tests/bin/Debug/netcoreapp2.2
-vuex.personal.tests/obj/Debug/netcoreapp2.2
-vuex.Tests/obj/project.assets.json
-vuex-personal/obj/project.assets.json
-vuex-personal/obj/vuex-personal.csproj.nuget.dgspec.json
-.vs/vuex-personal/DesignTimeBuild/*
-vuex.Tests/obj/Debug/netcoreapp2.2/*
-vuex.Tests/obj/*
-node_modules
-vuex-personal/node_modules
-
-
-
-
-
-# Created by https://www.gitignore.io/api/vue,node,vuejs,dotnetcore,visualstudio
+﻿# Created by https://www.gitignore.io/api/vue,node,vuejs,dotnetcore,visualstudio
 # Edit at https://www.gitignore.io/?templates=vue,node,vuejs,dotnetcore,visualstudio
 
 ### DotnetCore ###
@@ -508,3 +487,5 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/vue,node,vuejs,dotnetcore,visualstudio
 vuex-personal/bin
 vuex-personal/obj
+vuex.Tests/bin
+vuex.Tests/obj
