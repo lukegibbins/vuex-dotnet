@@ -107,20 +107,20 @@
       }
     },
 
+    // Mounted loads when the page loads
     mounted() {
       this.$store.dispatch("loadContactData");
     },
 
     methods: {
       submitForm() {
-        // here, the entirity of the state (state.contactData) is passed as a parameter in this method
         this.$v.$touch();
 
         if (this.$v.$invalid) {
           alert("Failed submission")
         } else {
           alert("Successful submission");
-          this.$store.dispatch("saveContactData");
+          this.$store.dispatch("saveContactData");   // during a dispatch, the entirity of the state is passed to the action
         }
       },
 

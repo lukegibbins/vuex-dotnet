@@ -2,7 +2,6 @@ using FireSharp;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using vuex_personal.Interfaces;
 using vuex_personal.Models;
@@ -18,9 +17,13 @@ namespace vuex_personal.Services
       BasePath = "https://vuex-225ab.firebaseio.com"
     };
 
-    public List<ContactViewModel> GetContacts()
+    public FirebaseService()
     {
       client = new FirebaseClient(config);
+    }
+
+    public List<ContactViewModel> GetContacts()
+    {
       var result = client.Get("/contacts");
       var contacts = result.ResultAs<List<ContactViewModel>>();      
       return contacts ?? new List<ContactViewModel>();
@@ -28,8 +31,6 @@ namespace vuex_personal.Services
 
     public async Task InsertOrUpdateContacts(List<ContactViewModel> contacts)
     {
-      client = new FirebaseClient(config);
-
       foreach (var contact in contacts)
         contact.isEditable = false;
 
