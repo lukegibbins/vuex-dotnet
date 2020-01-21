@@ -489,3 +489,4 @@ vuex-personal/bin
 vuex-personal/obj
 vuex.Tests/bin
 vuex.Tests/obj
+vuex-personal/wwwroot/bundle-files
