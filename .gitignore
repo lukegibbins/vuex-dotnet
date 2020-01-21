@@ -12,3 +12,5 @@ vuex-personal/obj/vuex-personal.csproj.nuget.dgspec.json
 .vs/vuex-personal/DesignTimeBuild/*
 vuex.Tests/obj/Debug/netcoreapp2.2/*
 vuex.Tests/obj/*
+node_modules
+vuex-personal/node_modules
