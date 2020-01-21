@@ -13271,11 +13271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\vuex-dotnet\\vuex-personal\\vuex-personal.csproj",
+      "projectUniqueName": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\safeNew\\vuex-dotnet\\vuex-personal\\vuex-personal.csproj",
       "projectName": "vuex-personal",
-      "projectPath": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\vuex-dotnet\\vuex-personal\\vuex-personal.csproj",
+      "projectPath": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\safeNew\\vuex-dotnet\\vuex-personal\\vuex-personal.csproj",
       "packagesPath": "C:\\Users\\luke.gibbins\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\vuex-dotnet\\vuex-personal\\obj\\",
+      "outputPath": "C:\\Users\\luke.gibbins\\Documents\\Visual Studio 2019\\safeNew\\vuex-dotnet\\vuex-personal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
