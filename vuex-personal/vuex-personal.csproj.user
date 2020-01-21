@@ -10,5 +10,6 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>False</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <ShowAllFiles>false</ShowAllFiles>
+    <NameOfLastUsedPublishProfile>vuex-dotnet - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
