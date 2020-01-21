@@ -3,3 +3,6 @@ vuex-personal.
 vuex-personal/obj
 vuex-personal/wwwroot/bundle-files
 .vs
+.vs/vuex-personal/v16
+vuex.personal.tests/bin/Debug/netcoreapp2.2
+vuex.personal.tests/obj/Debug/netcoreapp2.2
