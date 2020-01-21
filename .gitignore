@@ -10,3 +10,5 @@ vuex.Tests/obj/project.assets.json
 vuex-personal/obj/project.assets.json
 vuex-personal/obj/vuex-personal.csproj.nuget.dgspec.json
 .vs/vuex-personal/DesignTimeBuild/*
+vuex.Tests/obj/Debug/netcoreapp2.2/*
+vuex.Tests/obj/*
