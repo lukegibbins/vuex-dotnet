@@ -506,3 +506,5 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/vue,node,vuejs,dotnetcore,visualstudio
+vuex-personal/bin
+vuex-personal/obj
