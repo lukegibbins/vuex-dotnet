@@ -5,6 +5,7 @@ npm-debug.log
 yarn-error.log
 bin/Debug/netcoreapp2.2
 obj/
+v16/
 
 # Editor directories and files
 .idea
