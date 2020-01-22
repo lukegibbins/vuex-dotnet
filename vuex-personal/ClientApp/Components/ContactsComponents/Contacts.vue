@@ -2,6 +2,7 @@
   <div>
     <!-- In the entry vue file, the template used MUST be enclosed within div's -->
     <h1>Manage Contacts</h1>
+    <greeting-component></greeting-component>
     <br />
     <button type="button" class="btn btn-primary" v-on:click="insert()"> Add Contact </button>
     <br />
@@ -53,7 +54,7 @@
         </tr>
       </tbody>
     </table>
-    <input type="button" class="btn btn-success btn-lg" v-on:click="submitForm" value="Save" id="button-save"/>
+    <input type="button" class="btn btn-success btn-lg" v-on:click="submitForm" value="Save" id="button-save" />
   </div>
 </template>
 
@@ -61,6 +62,7 @@
 <script>
   import { mapGetters } from 'vuex';
   import { required, numeric, between } from 'vuelidate/lib/validators'  // you need to define what validators you required here
+  import Greeting from './Greeting'
 
   export default {
     name: "ContactsPage",
@@ -69,6 +71,7 @@
     components: {
       // this is where other components from other .vue files would normally go
       // e.g. help_section: "help-section" <!-- then this would be the html
+      "greeting-component": Greeting
     },
 
     // Computed properties are able to process and even modify getters or locally stored Data().
@@ -100,6 +103,7 @@
 
 
     // Refers to constant data on the page. This data can never be modified
+    // Props would be used if the projects array data listed below was required on multiple componenets, thus re-using code and not having static data on each page in the data object
     data() {
       return {
         genderOptions: ["Male", "Female"],
