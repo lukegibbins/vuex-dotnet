@@ -1,6 +1,6 @@
 <template>
 <div>
-  <p><i id="hello"> </i></p>
+  <p><i id="hello"> This is a greeting </i></p>
 </div>
 </template>
 

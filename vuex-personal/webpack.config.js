@@ -6,7 +6,7 @@ module.exports = {
   entry: './ClientApp/Applications/Contacts.js',
   output: {
     path: __dirname + '/wwwroot/bundle-files',
-    filename: 'Contacts.bundle-123.js'
+    filename: 'Contacts.bundle.js'
   },
   module: {
     rules: [
