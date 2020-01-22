@@ -14,4 +14,3 @@ npm run webpack-watch
 # run backend
 Open up the .sln file in Visual Studio and run the project
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
