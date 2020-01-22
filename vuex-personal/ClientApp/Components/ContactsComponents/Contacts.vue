@@ -2,7 +2,8 @@
   <div>
     <!-- In the entry vue file, the template used MUST be enclosed within div's -->
     <h1>Manage Contacts</h1>
-    <greeting-component></greeting-component>
+    <!-- Below is a prop. This needs to match the value in the data object => greetingsListings. The v-bind is the new property to use in the child file; props: ['greetings'] -->
+    <greeting-component v-bind:greetings="greetingsListings"></greeting-component>
     <br />
     <button type="button" class="btn btn-primary" v-on:click="insert()"> Add Contact </button>
     <br />
@@ -107,7 +108,8 @@
     data() {
       return {
         genderOptions: ["Male", "Female"],
-        projects: ["CEO Survey", "Clearing House", "TOV-Product", "TOV-Spacy", "British Gas", "Dynamic"]
+        projects: ["CEO Survey", "Clearing House", "TOV-Product", "TOV-Spacy", "British Gas", "Dynamic"],
+        greetingsListings: ["Good Afternoon", "Good Evening", "Good Morning"] // This is a prop. Data is sent from the parent (current .vue file) to the child (Greetings.vue file) 
       }
     },
 
