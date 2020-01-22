@@ -1,6 +1,6 @@
 # vuex-personal
 
-> A Vue.js project
+> A Vue.js-dotnet project
 
 ## Build Setup
 
@@ -8,11 +8,10 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# build and run frontend
+npm run webpack-watch
 
-# build for production with minification
-npm run build
-```
+# run backend VS proj
+Build project in Visual Studio
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
