@@ -142,6 +142,11 @@
         let obj = { firstName: "", surname: "", age: "", gender: "", isEditable: true, projects: []};
         this.contacts.push(obj);
       }
+
+      // # This is an example of how to get access to a global mixin
+      //daysOfWeek() {
+      //  return this.daysOfWeekFromMixin;
+      //}
     }
   }
 </script>

@@ -28,7 +28,11 @@
         } else {
           message_id.innerHTML = this.$props.greetings[1]
         }
-     }
+      }
+      // # This is an example of how to get access to a global mixin
+      //daysOfWeek() {
+      //  return this.daysOfWeekFromMixin;
+      //}
    }
  }
 </script>
