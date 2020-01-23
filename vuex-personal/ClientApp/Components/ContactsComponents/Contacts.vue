@@ -105,6 +105,7 @@
 
     // Refers to constant data on the page. This data can never be modified
     // Props would be used if the projects array data listed below was required on multiple componenets, thus re-using code and not having static data on each page in the data object
+    // Both data and functions/methods can be passed in props
     data() {
       return {
         genderOptions: ["Male", "Female"],
