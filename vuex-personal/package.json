@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.19.1",
-    "underscore": "^1.9.2",
+    "underscore": "^1.12.1",
     "vue": "^2.6.11",
     "vue-loader": "15.8.3",
     "vue-multiselect": "^2.1.6",
